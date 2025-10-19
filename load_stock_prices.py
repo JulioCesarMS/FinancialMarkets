@@ -30,15 +30,20 @@ db = MySQLDatabase("financialmarkets")
 
 
 # lista de mercados a actualizar
-mercados = ['S&P 500', 'NASDAQ']
+#mercados = ['S&P 500', 'NASDAQ']
+dic = {
+    "stock_prices_sp500": "S&P 500",
+    "stock_prices_nasdaq": "NASDAQ"
+}
+
 # dataframe con compañias y id
 company_map = db.execute_query("SELECT company_id, symbol FROM companies")
-for mercado in mercados: 
+for table_name, mercado in dic.items(): 
     market_id, list_symbols = get_marketid_simbols(mercado, conn=db)
     print(f"Actualizando {mercado}: ")
     k = 1
     for symbol in list_symbols:
-        start_date = get_last_date(symbol, conn=db)
+        start_date = get_last_date(symbol, table_name=table_name, conn=db)
         print(f"{k}) {symbol} desde {start_date}")
         data = yf.download(symbol, start=start_date, progress=False, auto_adjust=False)
         
@@ -78,7 +83,7 @@ for mercado in mercados:
         data_final.loc[:,'low_price'] = data_final['low_price'].astype(float)
         data_final.loc[:,'volume'] = data_final['volume'].astype(int)
         # inserta datos a base 
-        db.insert_to_db(data_final, tabla="stock_prices", batch_size=500)
+        db.insert_to_db(data_final, tabla=table_name, batch_size=500)
         k += 1
     print("\n")
 

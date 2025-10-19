@@ -74,19 +74,21 @@ def getData(symbols, start_date, end_date):
 
 
 # get last date
-def get_last_date(symbol, conn):
+def get_last_date(symbol, table_name, conn):
     db = conn
     query = f"""
         SELECT MAX(date) as last_date
-        FROM stock_prices sp
+        FROM {table_name} sp
         JOIN companies c ON sp.company_id = c.company_id
         WHERE c.symbol = '{symbol}';
     """
     result = db.execute_query(query)
-    if result['last_date'][0] is None:
-        return "2000-01-01"
-    else:
-        return (result['last_date'][0] + timedelta(days=1)).strftime('%Y-%m-%d')
+    try: 
+        start_date = (result['last_date'][0] + timedelta(days=1)).strftime('%Y-%m-%d')
+    except:
+        start_date = "2000-01-01"
+    
+    return start_date
     
 # get marketid    
 def get_marketid_simbols(market, conn):
