@@ -3,7 +3,7 @@
 # 📁 **Financial Markets**
 
 
-#![Mapa](./images/ima01.jpg)
+#![Financial Markets](./images/ima01.png)
 
 
 # Ejecución del proyecto
