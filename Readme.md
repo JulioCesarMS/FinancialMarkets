@@ -2,6 +2,8 @@
 
 # 📁 **Financial Markets**
 
+#![Financial Markets](./figures/ima01.png)
+
 
 Proyecto de ingeniería de datos orientado a la extracción, transformación y almacenamiento automatizado de información financiera de distintos mercados internacionales.
 
@@ -36,16 +38,16 @@ El objetivo principal del proyecto es construir una arquitectura reproducible y 
 
 
 
-#![Financial Markets](./figures/ima01.png)
+
 
 
 
 # Requerimientos:
-- ![Python 3.12.0](https://www.python.org/)
-- ![MySQL](https://dev.mysql.com/downloads/workbench/)
-- ![Git](https://git-scm.com/)
-- ![Docker](https://www.docker.com/)
-- ![VScode](https://code.visualstudio.com/)
+- [Python 3.12.0](https://www.python.org/)
+- [MySQL](https://dev.mysql.com/downloads/workbench/)
+- [Git](https://git-scm.com/)
+- [Docker](https://www.docker.com/)
+- [VScode](https://code.visualstudio.com/)
 
 # Ejecución del proyecto
 
