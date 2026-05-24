@@ -1,9 +1,9 @@
 [![My Skills](https://skillicons.dev/icons?i=py,html,css,git,mysql,vscode)](https://skillicons.dev)
 
-# 📁 **Financial Markets**
 
 #![Financial Markets](./figures/ima01.png)
 
+# 📁 **Financial Markets**
 
 Proyecto de ingeniería de datos orientado a la extracción, transformación y almacenamiento automatizado de información financiera de distintos mercados internacionales.
 
@@ -16,7 +16,7 @@ El sistema descarga diariamente precios históricos y actualizados de múltiples
 - FTSE100
 - FOREX
 
-La información es procesada mediante pipelines ETL desarrollado en Python y almacenada en una base de datos MySQL para su posterior análisis, visualización y modelado.
+La información es procesada mediante pipelines ETL desarrollado en Python y almacenada  MySQL para su posterior análisis, visualización y modelado.
 
 El proyecto integra:
 
@@ -36,12 +36,6 @@ La base de datos incluye tablas para:
 
 El objetivo principal del proyecto es construir una arquitectura reproducible y automatizada para análisis financiero y futuros procesos de analítica, machine learning y monitoreo de mercados.
 
-
-
-
-
-
-
 # Requerimientos:
 - [Python 3.12.0](https://www.python.org/)
 - [MySQL](https://dev.mysql.com/downloads/workbench/)
@@ -49,15 +43,7 @@ El objetivo principal del proyecto es construir una arquitectura reproducible y 
 - [Docker](https://www.docker.com/)
 - [VScode](https://code.visualstudio.com/)
 
-# Ejecución del proyecto
 
-- Descargar el proyecto en local : **Desktop** <break> 
-- Crear un ambiente virtual  <break>
-- Intalar dependencias <break> 
-- Activar el ambiente virtual <break> 
-
-
- 
 # Estructura del Proyecto
 
 El proyecto está estructurado de la siguiente manera:
@@ -157,6 +143,8 @@ Ejecutar el siguiente comando:
 ```bash
 docker compose up --build
 ```
+#![Proyecto](./figures/docker_installation.png)
+
 
 Este comando:
 - Construye la imagen Docker
