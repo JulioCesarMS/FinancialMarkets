@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    container_name: financialmarkets
+    environment:
+      DB_HOST: host.docker.internal
+      DB_PORT: 3306
+      DB_NAME: financialmarkets
+      DB_USER: root
+      DB_PASSWORD: astro123
+    volumes:
+      - .:/app
+    command: python main.py
+
+  # si se quiere mysql en docker 
+  # db:
+  #     image: mysql:8.0
+  #     container_name: 
+  #     restart: always
+  #     environment:
+  #       MYSQL_ROOT_PASSWORD: 
+  #       MYSQL_DATABASE: 
+  #     ports:
+  #       - "3306:3306"
+  #     volumes:
+  #       - mysql_data:/var/lib/mysql
+
