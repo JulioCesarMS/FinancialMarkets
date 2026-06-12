@@ -1,0 +1,11 @@
+# Datos
+
+# Excel
+
+# Python
+__pycache__/
+*.pyc
+
+# Entornos
+venv/
+.env
