@@ -1,7 +1,7 @@
 [![My Skills](https://skillicons.dev/icons?i=py,html,css,git,mysql,vscode)](https://skillicons.dev)
 
 
-#![Financial Markets](./figures/ima02.png)
+![Financial Markets](./figures/ima02.png)
 
 # 📁 **Financial Markets**
 
