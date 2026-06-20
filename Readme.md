@@ -88,11 +88,11 @@ El proyecto está estructurado de la siguiente manera:
           ├── README.md              # Documentación principal
           └── requirements.txt       # Dependencias Python
 
- # 1.- Intalación de Python y otras dependencias
+ ## Intalación de Python y otras dependencias
  
 Descargar e instalas todas herramientas en requerimientos.
 
-# 2.- Clonar el proyecto a una carpeta en escritorio
+## Clonar el proyecto a una carpeta en escritorio
  
 - Crear una carpeta en escritorio p.e. "FinancialMarkets" <break> 
 - Click derecho en cualquier lugar dentro de la carpeta y seleccionar **"Git Bash Here"** <break> 
@@ -105,7 +105,7 @@ Descargar e instalas todas herramientas en requerimientos.
   - Esperar unos minutos a que descargue los archivos en la carpeta
   
 
-## 3. Crear archivo `.env`
+## Crear archivo `.env`
 
 Crear en MySQL una conexión, con usuario, y contraseña, posteriormente una base llamada "financialmarkets". Con esa información  crear un archivo `.env` en la raíz del proyecto:
 
@@ -117,7 +117,7 @@ DB_USER= usuario raíz en MySQL
 DB_PASSWORD= contraseña para acceder a la conexión en MySQL
 ```
  
-# 3.- Creación de ambiente virtual
+## Creación de ambiente virtual
 
  Es recomendable crear un ambiente virtual para fijar la versión de python, así como las dependencias instaladas.
 
@@ -136,7 +136,7 @@ venv\Scripts\activate
 ```
 
 
-## 4. Construir y ejecutar Docker
+## Construir y ejecutar Docker
 
 Ejecutar el siguiente comando:
 
@@ -161,7 +161,7 @@ ver logs del contenedor:
 docker compose logs -f
 ```
 
-## 5. Orquestación con Prefect
+## Orquestación con Prefect
 
 El proyecto utiliza Prefect para automatizar la ejecución de pipelines.
 
@@ -170,5 +170,12 @@ Ejecutar deployment:
 ```bash
 python orchestration/deploy.py
 ```
+
+
+## Consultas 
+
+Una vez terminada la instalación, toma aproximadamente 100 minutos, se peden realizar consultas al schema generado:
+
+#![Proyecto](./figures/schema.png)
 
 

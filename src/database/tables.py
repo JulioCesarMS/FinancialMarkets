@@ -38,7 +38,6 @@ def table_companies():
 # crea tabla precios historicos
 def tabla_precios(market):
     
-    
     query = f"""
         CREATE TABLE IF NOT EXISTS stock_prices_{market} (
         price_id BIGINT AUTO_INCREMENT PRIMARY KEY,
